@@ -34,3 +34,44 @@ Bir base sınıfın başka bir sınıfa aktarımı söz konusudur. Anne Baba Ço
 
 ### Polymorphism (Çok Biçimlilik)
 Alt sınıflar üst sınıfın gösterdiği davranışları göstermek zorunda değildir. Alt sınıfların farklı davranışları göstermesine Çok biçimlilik denilmektedir.
+- Sanal metotlar kalıtım alınan yani miras veren sınıf içerisinde yazılan ve daha sonra alt sınıflarda yeniden yazılabilen metotlardır. Bunu da virtual ve override anahtar kelimeleri sağlar.
+```c#
+using System;
+
+public class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("The animal makes a sound.");
+    }
+}
+
+public class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("The dog barks: Woof!");
+    }
+}
+
+public class Cat : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("The cat meows: Meow!");
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        Animal myDog = new Dog();
+        Animal myCat = new Cat();
+        myDog.MakeSound(); // Output: The dog barks: Woof!
+        myCat.MakeSound(); // Output: The cat meows: Meow!
+        Animal genericAnimal = new Animal();
+        genericAnimal.MakeSound(); // Output: The animal makes a sound.
+    }
+}
+```
