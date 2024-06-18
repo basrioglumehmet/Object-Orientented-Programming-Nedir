@@ -24,7 +24,7 @@ Sınıf field'ların dışarıdan müdaheleye kapanması ve gizlenmesidir. Gizle
 Soyutlama, karmaşıklığı yönetmek ve bir nesnenin veya sistemin önemli özelliklerini vurgulayarak gereksiz detaylardan arındırma sürecidir. 
 İkiye ayrılır:
 - Abstract sınıflar : Ortak metodları barındırır ve newlenemez.
-- Interface'ler : Sadece metod imzalarını (ad ve parametreler) barındırır, metodun nasıl uygulanacağını ise içermez ve newlenemez.
+- Interface'ler : Sadece metod imzalarını (ad ve parametreler) barındırır, metodun nasıl uygulanacağını ise içermez ve newlenemez. C#'da IArabaParcalari gibi isimlendirme kuralı ile belirtilir.
 
 ### Inheritance (Kalıtım Miras)
 ![bedtime-boss-baby](https://github.com/basrioglumehmet/Object-Orientented-Programming-Nedir/assets/166669195/da2f070d-cb0d-4cba-a87c-14038f4ee67b)
